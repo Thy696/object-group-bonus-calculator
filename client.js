@@ -73,9 +73,6 @@ function eachEmployee(number) {
     console.log(bonusPercentage -= 0.01);
   }
 
-  totalBonus = bonusPercentage;
-  console.log('Total bonus of ' + employees[number].name + ' is: ' + totalBonus)
-
   if (bonusPercentage > 0.13) {
     console.log(employees[number].name, 'bonus is > 13% ');
     console.log(employees[number].name, 'bonus now: ', bonusPercentage = 0.13);
@@ -84,9 +81,13 @@ function eachEmployee(number) {
     console.log(employees[number].name, 'bonus is < 0 ');
     console.log(employees[number].name, 'bonus now: ', bonusPercentage = 0);
   }
+  
 
-  let compensation = Number(employees[number].annualSalary) + Number(bonusPercentage * employees[number].annualSalary);
-  console.log('Total compensation is: ', compensation)
+  totalBonus = Math.round(bonusPercentage * employees[number].annualSalary);
+  console.log('Total bonus of ' + employees[number].name + ' is: $' + totalBonus)
+
+  let compensation = Math.round(Number(employees[number].annualSalary) + Number(bonusPercentage * employees[number].annualSalary)); 
+  console.log('Total compensation is: $'+ compensation)
 
   employee = {
     name: employees[number].name,
@@ -94,13 +95,13 @@ function eachEmployee(number) {
     totalCompensation: compensation,
     totalBonus: totalBonus,
   }
-  checkEmployee.push(employee);
 
+  checkEmployee.push(employee);
   return employee;
 
 
 }//end eachEmployee
-eachEmployee(1);
+eachEmployee(2);
 console.log(checkEmployee);
 
 
