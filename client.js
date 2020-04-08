@@ -52,9 +52,6 @@ let checkEmployee = [];
 function eachEmployee(number) {
   let bonusPercentage = 0;
   let totalBonus = 0;
-  let totalCompensation = 0;
-
-
   if (employees[number].reviewRating <= 2) {
     console.log(employees[number].name, 'No bonus');
   } else if (employees[number].reviewRating === 3) {
@@ -103,7 +100,7 @@ function eachEmployee(number) {
 
 
 }//end eachEmployee
-eachEmployee(0);
+eachEmployee(1);
 console.log(checkEmployee);
 
 
