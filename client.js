@@ -48,7 +48,7 @@ for (let i = 0; i < employees.length; i++) {
 }
 
 //Function Logic
-let checkEmployee = [];
+// let checkEmployee = [];
 function eachEmployee(number) {
   let bonusPercentage = 0;
   let totalBonus = 0;
@@ -96,12 +96,12 @@ function eachEmployee(number) {
     totalBonus: totalBonus,
   }
 
-  checkEmployee.push(employee);
+  // checkEmployee.push(employee);
   return employee;
 
 
 }//end eachEmployee
-eachEmployee(2);
-console.log(checkEmployee);
+console.log(eachEmployee(2));
+// console.log(checkEmployee);
 
 
